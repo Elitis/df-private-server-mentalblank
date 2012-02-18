@@ -1,0 +1,3 @@
+Options -Indexes -Includes
+ErrorDocument 403 /includes/errordoc.php
+ErrorDocument 404 /includes/errordoc.php

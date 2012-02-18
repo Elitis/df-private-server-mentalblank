@@ -1,0 +1,121 @@
+**********************************************************
+* DragonFable Private Server Files                       *
+* Created By MentalBlank (mentalblank@live.com)          *
+* Layout by: HellFireAE                                  *
+**********************************************************
+
+**********************************************************
+-- IMPORTANT INFORMATIONS --                           
+AT THE CURRENT TIME THESE FILES ARE IN DEVELOPMENT
+AND ARE NOT CURRENTLY COMPLETE OR 100% SECURE
+ 
+THESE FILES WERE CREATED FOR EDUCATIONAL PURPOSES ONLY
+I DO NOT SUPPORT ANY SERVERS CREATED FROM THESE FILES
+
+These Private server files should only be downloaded from:
+http://cris-is.sylin-on.me
+
+Team:
+ - MentalBlank (Project Manager, Lead Coder & Bug Fixer).
+ - HellFireAE (Website Design & Bug Fixer).
+ - Members of http://cris-is.sylin-on.me (Testers).
+**********************************************************
+
+4TH FEBRUARY 2010:
+    - Added cf-buybankslots1.php
+    - Added cf-buybankslots2.php
+    - Added cf-buybankslots3.php
+    - Added cf-buybagslots1.php
+    - Added cf-buybagslots2.php
+    - Added cf-buybagslots3.php
+
+5TH FEBRUARY 2010:
+     - Modified Client... cf-buybankslots2.php and cf-buybankslots3.php are no longer needed.
+     - Modified Client... cf-buybagslots2.php and cf-buybagslots3.php are no longer needed.
+     - Added cf-dragonhatch.php
+     - Modified cf-characterload.php - Now loads set starting items and can load dragons!.
+     - Modified cf-questload.php - Now you can have quest rewards!.
+     - Added cf-questreward.php - Saves quest reward to your Inventory.
+     - Added cf-dragontrain.php
+     - Added cf-dragonuntrain.php
+     - ERROR IN: cf-buybagslots1.php - Prices need to be fixed.
+
+6TH Feburary 2011
+     - Fixed Indentation in some files.
+     - Fixed some major security issues.
+
+13TH Feburary 2011
+     - Added cf-dragonelement.php
+     - Fixed & Added dates and times where needed.
+     - Finished dcBuy.php - You can now change your class, gender and name.
+
+14th March 2011
+     - Added cf-dragonfeed.php -  You can feed your dragon now...
+     - Added cf-dragoncustomize.php -  you can customize your dragon!!! YAY :D
+     - Added New & Updated Screenshots
+
+26th March 2011
+     - Fixed Issues when Buying bank slots - Default Bank Slots increased to 10 (Do not change!)
+     - Fixed Issues when Creating an Account.
+     - Added cf-saveweaponconfig.php
+     - Temporarily Fixed Inventory Glitch when merging
+
+27th March 2011
+     - Added cf-hairbuy.php
+     - Improved Normal Shops & Merge Shops and fixed a few errors before they arised, also You shouldn't have any more Item Counts and Max Stack Size errors when merging, buying, selling and destroying items
+     - Added cf-hairbuy.php
+
+20th April 2011
+     - Fixed cf-classload... somehow it got replaced with cf-characterload.php awhile ago
+     - Added PrevClassID and Edited files where needed
+     - Added BaseClassID and Edited files where needed
+
+21st April 2011
+     - Shinigami added to the DFPS Team
+     - Added cf-hairshopload.php - Hair shops are now Complete!!! Add your own hairs.
+     - Added cf-loadpvpchar.php
+     - Added cf-loadpvprandom.php
+     - Edited cf-questcomplete.php - Quest rewards are now selected randomly
+
+28th April 2011
+     - Added cf-buybagslots1.php
+     - Added cf-loadfriend.php
+     - Improved Items - Resistances, Stats and other Junk
+     - Added Zones... look in includes/config.php to change the info.
+
+4th May 2011
+     - Zones Now load from the database (df_extra)
+     - Fixed a Few Bugs
+     - Fixed cf-characternew.php - Works fine now.
+     - Removed some Crap.
+     - Fixed some minor Errors
+     - Fixed error when exiting Barber, Bank, Town Hall etc.
+     - Fixed Bank Errors when bank is empty
+     - Fixed cf-statsuntrain.php
+
+5th May 2011 - 17th November 2011
+     - A LOT OF UPDATES AFTER MAY 4TH WERE LOST DUE TO THE SVN MESSING UP AND A VIRUS OR 2... btut dont worry it's all good now.
+     - Recovered a few updates that were lost and/or corrupted.
+     - Recoded all the files to Export XML Properly without errors
+     - Added extra security to passwords with sha1 Encryption and Junk
+     - Users with an access level of 0 are considered banned and cannot login
+     - Fixed Security Issue where users could 'hack' the game and change amount of EXP and Gold earned in a Quest... Thewy will now be banned automatically.
+     - Added security for admin classes, users loading them with an access level lower than 40 will be auto-banned.
+     - Added security for admin towns, users loading them with an access level lower than 40 will be auto-banned.
+     - Added security for admin classes, users loading them with an access level lower than 40 will be auto-banned.
+     - Fixed a whole heap of other stuff and lost the documentation... sorry bro.
+     - ADDED CF-ITEMEXP.PHP
+     - FIXED ITEM COUNT AND INFO ISSUE IN LOADING + SHOPS
+     - FIXED MERGE ERROR THAT CHANGES ALL ITEMS
+
+16th December 2011
+     - Fixed Item Count issues in Bank
+     - Fixed a Small Database Communication Problem.
+
+18th December 2011
+     - Fixed Issue when changing home towns
+     - Fixed Bug in Auto Ban when changing home towns
+     - Fixed Issue With Zones
+
+*********************END OF 2011!*********************
+****PLEASE CHECK 2012 Updates.txt FOR MORE UPDATES****

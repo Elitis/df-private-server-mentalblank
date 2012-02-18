@@ -1,0 +1,102 @@
+**********************************************************
+* DragonFable Private Server Files                       *
+* Created By MentalBlank (mentalblank@live.com)          *
+* Layout by: HellFireAE                                  *
+**********************************************************
+
+**********************************************************
+-- IMPORTANT INFORMATIONS --                           
+AT THE CURRENT TIME THESE FILES ARE IN DEVELOPMENT
+AND ARE NOT CURRENTLY COMPLETE OR 100% SECURE
+ 
+THESE FILES WERE CREATED FOR EDUCATIONAL PURPOSES ONLY
+I DO NOT SUPPORT ANY SERVERS CREATED FROM THESE FILES
+
+These Private server files should only be downloaded from:
+http://cris-is.sylin-on.me or http://mental.vidyagaems.net/
+
+Team:
+ - MentalBlank (Project Manager, Lead Coder & Bug Fixer).
+ - HellFireAE (Website Design & Bug Fixer).
+ - Members of http://cris-is.sylin-on.me (Testers).
+**********************************************************
+
+Current Status (January 11th):
+    Character: (100%)
+    Towns, Maps and Zones: (100%)
+    Shops, Classes & Items: (75%)
+    - Test cf-itemexp.php
+    - Fix Stat Points Remaining Glitch in stat training
+    - Fix Inventory Glitch when merging
+    Bank & Item Slots: (100%)
+    Dragons: (90%)
+    - Start cf-loadpvpdragon.php
+    - Test cf-loadpvpdragon.php
+    PVP: (90%)
+    - Start cf-loadpvpdragon.php
+    - Test cf-loadpvpdragon.php
+    Quests: (90%)
+    - Start cf-questmerge.php
+    - Test cf-questmerge.php
+    Friends: (100%)
+    Misc:
+    - Start cf-reportname.php
+
+***JANUARY 2012 NEWS UPDATE***:
+Hi, I know i havent updated the files in a while but i have been busy and this was only meant to be a side project i was doing in my spare time...
+But with Girlfriends, Work, Lectures and Study i have had hardly anytime to work on thes files... Please continue to be patient as the files almost finished and
+I have not recieved any money towards this project and am being really nice providing these files for free...
+
+January 9th 2012:
+    - Started work on DF Shop Grabber + SQL Maker
+    - Finished Work on Shop Grabber.
+
+January 10th 2012:
+    - Started work on DF Quest Grabber + SQL Maker
+    - Finished Work on Quest Grabber.
+
+January 11th 2012:
+    - Started work on DF Town Grabber + SQL Maker
+    - Finished Work on Town Grabber.
+    - Combined Shop, Quest and Town Data Grabbers + SQL Makers into one Executable
+    - Shops 1 - 235 + Items added to database (SWF Files still Missing)
+
+January 12th 2012:
+    - Started Work on cf-itemexp.php
+    - Finished Work on cf-itemexp.php
+    - Modified cf-toBank.php to work with Item EXP
+    - Modified cf-toCharFromBank.php to work with Item EXP
+    - Fixed bug in cf-toBank.php that would delete items when you had more than one.
+    - Fixed Item Count Errors in All Bank Files
+    - Issue With Item ID when moving items.
+
+January 16th 2012
+    - Fixed Zones in cf-loadfriend.php
+    - Fixed Zones in cf-loadpvprandom.php
+    - Fixed Zones in cf-loadpvpchar.php
+    - Fixed Zones in cf-questload.php
+    - Fixed Zones in cf-characterload.php
+    - Fixed Zones in cf-changehometown.php
+    - Fixed Zones in cf-loadtowninfo.php
+    - Fixed Item Min and Max Damage in cf-characterload.php
+    - Fixed Item Min and Max Damage in cf-bankload.php
+    - Fixed Item Min and Max Damage in cf-questreward.php
+    - Fixed Item Min and Max Damage in cf-toBank.php
+    - Fixed Item Min and Max Damage in cf-questcomplete.php
+    - Fixed Item Min and Max Damage in cf-shopload.php
+    - Fixed Only 1 inventory item loading in cf-characterload.php
+    - Fixed Item ID Bug in cf-characterload.php
+    - Fixed Inventory Item Count Bug in cf-characterload.php
+    - ************************************************************************
+    - *******************NEED TO USE "CharItemID" PROPERLY!*******************
+    - ************************************************************************
+
+January 16th 2012
+    - Fixed Inventory Items loading X times (X being the amount of items you have) in cf-characterload.php
+
+January 31st 2012
+    - Changed cf-characterload.php to use CharItemID properly
+    - Changed cf-loadpvpchar.php to use CharItemID properly
+    - Changed cf-loadpvprandom.php to use CharItemID properly
+    - Added Security for Admin Items in cf-itembuy.php
+

@@ -1,0 +1,160 @@
+**********************************************************
+* DragonFable Private Server Files                       *
+* Created By MentalBlank (mentalblank@live.com)          *
+* Layout by: HellFireAE                                  *
+**********************************************************
+
+**********************************************************
+-- IMPORTANT INFORMATIONS --                           
+AT THE CURRENT TIME THESE FILES ARE IN DEVELOPMENT
+AND ARE NOT CURRENTLY COMPLETE OR 100% SECURE
+ 
+THESE FILES WERE CREATED FOR EDUCATIONAL PURPOSES ONLY
+I DO NOT SUPPORT ANY SERVERS CREATED FROM THESE FILES
+
+These Private server files should only be downloaded from:
+http://cris-is.sylin-on.me
+
+Team:
+ - MentalBlank (Project Manager, Lead Coder & Bug Fixer).
+ - HellFireAE (Website Design & Bug Fixer).
+ - Members of http://cris-is.sylin-on.me (Testers).
+**********************************************************
+
+OCTOBER 25 2010:
+    - Updated client to 9.0.6
+    - Added cf-characterdelete.asp
+    - Added cf-expsave.asp - Can save Exp and Gold to DB but it will mess up when leveling up.
+    - Modified cf-usersignup.php so that if the user navigates to the file directly it will just die...
+    - Modified cf-characternew.php so that if the user navigates to the file directly it will just die...
+    - Modified cf-characterload.asp so that
+    intExpToLevel - Now is auto calculated.
+    strClassFileName - Loads class-(strClassName).swf
+    intExp, HP, intMP, intSilver, intGold, intGems, intCoins, intMaxBagSlots, intMaxBankSlots, intMaxHouseSlots, intMaxHouseItemSlots, RaceID, strRaceName, BaseClassID, ClassID, strClassName  - are now all loaded from the DB
+
+OCTOBER 26 2010:
+    - Forgot to connect cf-expsave.asp and cf-characterdelete.asp to the DB...
+    - Added cf-questcomplete.asp - You can now finish that first quest! also Saves EXP and Gold
+    - Added cf-loadtowninfo.asp - Successfully Loads towns :D
+    - Added towns/town-oaklore.swf
+    - Modified cf-characterload.asp to also load Oaklore instead of always loading the Intro
+    - Added DesignNotes
+    - Added Game size modifier links.
+
+OCTOBER 27 2010:
+    - Fixed the sizes
+    - Dragonfable.css now loads inside the game/ folder
+    - Took out the DF/ folder and made that work
+    - Added databased news, Promo, Sitename, SignupSWF, and LoaderSWF
+
+OCTOBER 28 2010:
+    - Added cf-statstrain.asp
+    - Added cf-statsuntrain.asp
+    - Modified cf-characterload.asp - now loads all stats from the database
+    - Modified cf-questload.asp - it now loads the correct quest from the database instead of always loading the Intro Quest
+    - Added cf-loadwarvars.asp - Incomplete, although you will probably never use it.
+    If your try to update your stats and it crashes, dont worry its fine... the stats will be updated and your gold taken away.
+
+OCTOBER 29 2010:
+    - Modified cf-characterload.asp and cf-userlogin.asp - Now Loads Class info from DB.
+    - Added the Dragon versions of Warrior, Mage & Rouge to the DB.
+    - Modified cf-characterload.asp - intWIS is now loaded from the db... don't know how i missed it.
+    - Modified cf-questload.asp - Now loads intro quest if quest does not exist instead of crashing
+    - Modified cf-characterload.asp - Class Armor & Weapon info also load from the DB
+    - Added gamefiles/pets/pet-twilly.swf - So you can fight your First monster with some creepy Moglin.
+    - Added cf-changeclass.asp
+    - Modified cf-characterload.asp - Hairs are now loaded from the DB (if hair does not exist 'head/M/hair-male-carefree.swf' will load)
+
+OCTOBER 30 2010:
+    - Added Quest 101 - You can now return to the Intro area without the gay story.
+    - Modified cf-characterload.asp - Quest, Skill & Armor Values are now loaded from the DB.
+    - Added newCharacter.fla - Maybe you want to change something...
+    - The Server now works with female characters... you just need to collect the class & hair swfs
+    - Updated some links on the Design notes
+    - Tested cf-changeclass.asp - IT WORKS!!!!
+    - Added cf-classload.asp - YES!!!!
+    - Fixed cf-loadtowninfo.asp - Somewhere between October 28th and 31st I messed it up... You can load your home town properly now.
+    - Added topchars.asp
+    - Edited the Client to read PHP instead of ASP
+    - Entire website is now PHP
+    - Sign-up can now be accessed from "Create a New Account" in the client
+    - Base Classes fixed
+
+OCTOBER 31 2010:
+    - Added Quest 101 - You can now return to the Intro area without the gay story.
+    - Modified cf-characterload.php - Quest, Skill & Armor Values are now loaded from the DB.
+    - Added newCharacter.fla - Maybe you want to change something...
+    - The Server now works with female characters... you just need to collect the class & hair swfs
+    - Updated some links on the Design notes
+    - Added cf-classload.php
+    - Fixed cf-loadtowninfo.php - Somewhere between October 28th and 31st MentalBlank messed it up... You can load your home town properly now.
+    - Added topchars.php
+
+NOVEMBER 2 2010:
+    - Modified - cf-changehometown.php - minor change
+    - Modified - cf-characterload.php - now loads items!
+    - Added - cf-getquestcounter.php
+    - Finished cf-shopload.php
+    - Added cf-itembuy.php
+    - Added cf-itemsell.php
+    - Modified - Every cf-****.php file - Error codes actually work now...
+    - Modified cf-characterload.php - Fixed gold/exp error when exiting quests
+    - Finished cf-expsave.php - you can now reach level 2!
+    - Fixed cf-questload.php - I messed up where it changes your home town...
+
+NOVEMBER 5 2010:
+    - Edited cf-questload.php - Monsters now load from the database :D
+    - Added cf-interfaceload.php - Interface files will now load from the DB
+    - Added some more towns and quests - monsters have not been added yet.
+
+NOVEMBER 7 2010:
+    - Added cf-mergeshopload.php - You can now load merge shops... although it has bugs
+    - Added cf-itemmerge.php - You can now merge stuff... although it has bugs
+    - Noticed that if you want a Monster with MonsterRef 3 you also need to load MonsterRef's 0, 1 & 2...
+    - Edited cf-questload.php - Fixed a monster loading bug.
+
+NOVEMBER 16 2010:
+    - Added a more detailed and versatile Design Notes system.
+    - Added a online user list to the homepage.
+    - Updated the background skin to my own design.
+    - Databased the skin, FaceBook Username, and MySpace Username.
+
+NOVEMBER 21 2010:
+    - Added cf-savequeststing.php
+    - Added cf-saveskillstring.php
+    - Added cf-savearmorstring.php
+    - Edited cf-characterload.php - Fixed Quest, Skill, and armor string loading.
+    - Added Monsters to Drakaths Quest, Zorbaks Bear Quest, Renegade Ambush Quest and Hydra Bridge Quest.
+    - Edited cf-itembuy.php, cf-itemmerge & cf-itemsell.php - Fixed the bugs.
+    - Added cf-itemdestroy.php
+
+NOVEMBER 23 2010:
+    - Edited the Game sizes to work better and are now editable by the URL
+    - Dragonfable.css now loads
+    - Made some changes to the client
+    - Added a Latest Release Version after you login, takes the place of the status as Verified.
+    - Edited all the links inside of usersignup_05.swf and made them all PHP. So this shouldn't have anymore bugs.
+
+NOVEMBER 24 2010: (18th December*)
+* This Update was lost when http://cris-is.stylin-on.me/ went down but was found later.
+    - Renamed /game/default.php to index.php
+    - Added cf-bankload.php
+    - Added cf-toBank.php
+    - Added cf-toCharFromBank.php
+    - Started work on Hair Shops
+
+NOVEMBER 27 2010: (18th December)
+* This Update was lost when http://cris-is.stylin-on.me/ went down but was found later.
+    - Fixed cf-usersignup.php - You can now signup without any problems
+
+DECEMBER 8 2010:
+    - Added a better news system complete with a write news, delete news, and edit news option (also available with the more-news section)
+    - Updated to the newest client(9.8.0) with PHP
+    - Made a login system through cookies
+    - Added a account manager fully equipped with a password changer, email changer and Date of Birth changer.
+
+DECEMBER 18th 2010:
+    - Found 2 missing updates... it must have been lost when Cris's Forum went down... Read the Updates for November 24th and 27th for more Information
+
+*********************END OF 2010!*********************
+****PLEASE CHECK 2011 Updates.txt FOR MORE UPDATES****

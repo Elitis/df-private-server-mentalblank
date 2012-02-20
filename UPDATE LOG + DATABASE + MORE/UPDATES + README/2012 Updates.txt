@@ -99,4 +99,8 @@ January 31st 2012
     - Changed cf-loadpvpchar.php to use CharItemID properly
     - Changed cf-loadpvprandom.php to use CharItemID properly
     - Added Security for Admin Items in cf-itembuy.php
+    
+Feburary 20th 2012
+    - Fixed a SQL error in cf-usersignup.com (It's all good now and you can signup)
+    - Discovered bug in signup SWF file... when completed the 'continue' button will take the player to the actual DF website
 

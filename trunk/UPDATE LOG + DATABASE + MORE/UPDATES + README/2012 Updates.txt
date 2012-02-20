@@ -13,7 +13,7 @@ THESE FILES WERE CREATED FOR EDUCATIONAL PURPOSES ONLY
 I DO NOT SUPPORT ANY SERVERS CREATED FROM THESE FILES
 
 These Private server files should only be downloaded from:
-http://cris-is.sylin-on.me or http://mental.vidyagaems.net/
+http://cris-is.sylin-on.me or http://code.google.com/p/df-private-server-mentalblank/
 
 Team:
  - MentalBlank (Project Manager, Lead Coder & Bug Fixer).

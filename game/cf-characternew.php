@@ -15,9 +15,12 @@
 include ("../includes/config.php");
 
 $username = str_replace("%0D", "", mysql_real_escape_string(stripslashes($_POST["strUsername"])));
-$password = md5($_POST["strPassword"]);
-$token = mysql_real_escape_string(stripslashes($_POST["strToken"]));
 $userid = mysql_real_escape_string(stripslashes($_POST['intUserID']));
+$salt_query = mysql_query("SELECT salt FROM df_users WHERE id='".$userid."' LIMIT 1") or $error = 1;
+$salt_result = mysql_fetch_assoc($salt_query);
+$salt = $salt_result['salt'];
+$password = md5(sha1($_POST["strPassword"], $salt));
+
 $character = mysql_real_escape_string(stripslashes($_POST["strCharacterName"]));
 $gender = mysql_real_escape_string(stripslashes($_POST["strGender"]));
 $hairid = mysql_real_escape_string(stripslashes($_POST["intHairID"]));
@@ -40,30 +43,37 @@ if($character == "" || $gender == ""){
 	echo "<error>";
 	echo "<result_lv code=\"526.14\" reason=\"" . $reason . "\" message=\"" . $message . "\" action=\"None\"/>";
 	echo "</error>";
-	die();
+	echo "&code=526.14&reason=$reason&message=$message&action=none";
 } else{
-	$user = mysql_query("SELECT * FROM df_users WHERE name='".$username."' AND pass='".$password."' LIMIT 1");
-	$char = mysql_query("SELECT * FROM df_characters WHERE name='".$character."' AND userid = '" . $userid . "' LIMIT 1");
+	$user = mysql_query("SELECT * FROM df_users WHERE name='".$username."' AND pass='".$password."' LIMIT 1") or $error = 1;
+	$user_result = mysql_fetch_assoc($user);
+	$char = mysql_query("SELECT * FROM df_characters WHERE name='".$character."' AND userid = '" . $userid . "' LIMIT 1") or $error = 1;
 
-	if(mysql_num_rows($user) == 0){
+	if($error == 1){
 		$error = 1;
 		$reason = "Error!";
-		$message = "User Does Not Exist.";
-	}
-	if($password != $token){
-		$error = 1;
-		$reason = "Error!";
-		$message = "Something went wrong.";
-	}
-	if(empty($character)){
-		$error = 1;
-		$reason = "Error!";
-		$message = "You already have a character with this name.";
-	}
-	if(mysql_num_rows($char) > 0){
-		$error = 1;
-		$reason = "Error!";
-		$message = "Character Already Exists.";
+		$message = "Issue with database information, please contact server staff.";
+	} else {
+		if(mysql_num_rows($user) == 0){
+			$error = 1;
+			$reason = "Error!";
+			$message = "User Does Not Exist.";
+		}
+		if($password != $user_result['pass']){
+			$error = 1;
+			$reason = "Error!";
+			$message = "Something went wrong with your account password.";
+		}
+		if(empty($character)){
+			$error = 1;
+			$reason = "Error!";
+			$message = "You already have a character with this name.";
+		}
+		if(mysql_num_rows($char) > 0){
+			$error = 1;
+			$reason = "Error!";
+			$message = "Character Already Exists.";
+		}
 	}
 
 	if($error != 1){
@@ -73,7 +83,6 @@ if($character == "" || $gender == ""){
 		echo "&code=0&reason=$reason&message=$message&action=none";
 	} else {
 		echo "&code=526.14&reason=$reason&message=$message&action=none";
-	        die();
 	}
 }
 ?>

@@ -13,7 +13,7 @@ THESE FILES WERE CREATED FOR EDUCATIONAL PURPOSES ONLY
 I DO NOT SUPPORT ANY SERVERS CREATED FROM THESE FILES
 
 These Private server files should only be downloaded from:
-http://cris-is.sylin-on.me or http://code.google.com/p/df-private-server-mentalblank/
+http://cris-is.sylin-on.me or http://mental.vidyagaems.net/
 
 Team:
  - MentalBlank (Project Manager, Lead Coder & Bug Fixer).
@@ -101,6 +101,8 @@ January 31st 2012
     - Added Security for Admin Items in cf-itembuy.php
     
 Feburary 20th 2012
-    - Fixed a SQL error in cf-usersignup.com (It's all good now and you can signup)
+    - Fixed a SQL error in cf-usersignup.php (It's all good now and you can signup)
     - Discovered bug in signup SWF file... when completed the 'continue' button will take the player to the actual DF website
-
+	
+March 03rd 20121
+	- Fixed a bug in cf-characternew.php that would not encrypt the password properly and a few minor code errors. It works now!
